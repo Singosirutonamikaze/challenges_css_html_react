@@ -1,0 +1,49 @@
+@use '../variables/variables'as v;
+@use '../variables/font'as f;
+
+.hero__button {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: v.$color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background v.$transition-base;
+
+    @media (min-width: v.$breakpoint-desktop) {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &:hover {
+        background: v.$color-grey-800;
+    }
+}
+
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: f.$font-weight-semibold;
+    color: v.$color-black;
+    transition: color v.$transition-base;
+    margin-top: 1rem;
+
+    @media (min-width: v.$breakpoint-desktop) {
+        margin-top: 2rem;
+    }
+
+    img {
+        transition: transform v.$transition-base;
+    }
+
+    &:hover {
+        color: v.$color-grey-500;
+
+        img {
+            transform: translateX(0.5rem);
+        }
+    }
+}

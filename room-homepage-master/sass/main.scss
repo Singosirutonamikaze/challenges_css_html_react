@@ -1,0 +1,45 @@
+@use 'variables/variables'as v;
+@use 'variables/font'as f;
+@use 'animation/animations';
+@use 'components/header';
+@use 'components/button';
+@use 'components/main';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: f.$font-family;
+    font-weight: f.$font-weight-medium;
+    line-height: 1.6;
+    color: v.$color-grey-800;
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
