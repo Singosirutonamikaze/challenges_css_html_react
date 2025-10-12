@@ -1,0 +1,62 @@
+@use 'variables' as v;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin hover-underline($color: v.$white) {
+    position: relative;
+    
+    &:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 2px;
+        background: $color;
+    }
+}
+
+@mixin button-base {
+    background: transparent;
+    border: 1px solid v.$black;
+    padding: 0.8rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: v.$font-alata;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: v.$black;
+        color: v.$white;
+    }
+}

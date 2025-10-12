@@ -1,0 +1,28 @@
+//_variables.scss
+// Colors
+$primary-color: hsl(228, 45%, 44%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+// Fonts
+$font-alata: 'Alata',
+sans-serif;
+$font-josefin: 'Josefin Sans',
+sans-serif;
+
+// Spacing
+$section-padding: 8rem;
+$section-padding-mobile: 6rem;
+$container-padding: 10rem;
+$container-padding-mobile: 1.5rem;
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+// Typography
+$heading-large: 4.5rem;
+$heading-medium: 3rem;
+$heading-small: 2rem;
